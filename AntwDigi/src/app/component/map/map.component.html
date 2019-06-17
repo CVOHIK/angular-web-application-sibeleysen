@@ -1,0 +1,20 @@
+<div>
+<h5>Sporthallen op de map:</h5>
+
+<agm-map [zoom]="10" [latitude]="51.219448" [longitude]="4.402464">
+
+<div>
+  <ng-container *ngFor="let sporthal of sporthallen">
+    <agm-marker 
+    [latitude]="sporthal.geometry.coordinates[1]" 
+    [longitude]="sporthal.geometry.coordinates[0]" >
+      <agm-info-window>
+        <b>{{ sporthal.properties.naam }}</b> <br>
+        {{ sporthal.properties.straat }} {{ sporthal.properties.huisnummer }}<br>
+        {{ sporthal.properties.postcode }} - {{ sporthal.properties.district}}
+      </agm-info-window>
+    </agm-marker>
+  </ng-container>
+</div>
+</agm-map>
+</div>  

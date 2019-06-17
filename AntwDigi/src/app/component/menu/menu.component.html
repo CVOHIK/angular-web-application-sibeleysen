@@ -1,0 +1,13 @@
+<div class="header">
+    <button mat-button [matMenuTriggerFor]="aboveMenu" class="white"><b>Menu</b></button>
+
+    <mat-menu #aboveMenu="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="subMenu">Sporthallen</button>
+      <button mat-menu-item routerLink="contact">Contact</button>
+    </mat-menu>
+    
+    <mat-menu #subMenu="matMenu">
+      <button mat-menu-item routerLink="data">Gegevens</button>
+      <button mat-menu-item routerLink="map">Map</button>
+    </mat-menu>
+</div>
